@@ -64,6 +64,8 @@ Route::get('/admin/menu/{id}/delete', [MenuController::class, "delete"])->name("
 //Route::get('/admin/information', [InformationController::class, "index"])->name("admin.information");
 //Route::put('/admin/information/update', [InformationController::class, "update"])->name("admin.information.update");
 
+// Comment nay de test git desktop
+
 
 // CK Finder setup
 Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
