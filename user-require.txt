@@ -1,0 +1,25 @@
+Trang chủ:
+    - Tiêu đề lớn
+    - Thông tin giới thiệu ngắn về homestay
+    - List danh sách các dịch vụ của homestay
+    - Các loại phòng của homestay
+    - Danh sách đánh giá của khách hàng
+    - Link video về homestay
+    - Danh sách các ưu đãi của homestay đó
+    - Danh sách ảnh, thư viện ảnh của homestay
+    - Ẩm thực, hiển thị ra thực đơn chi tiết của homestay đó
+Trang danh sách bài viết:
+    - Tiêu đề của bài viết
+    - Chi tiết bài viết (Ngắn)
+    - Hình ảnh tiêu đề của bài viết
+    - Link dẫn đến bài viết gốc
+    - Ngày giờ tạo bài viết
+    - Người viết bài
+Trang danh sách dịch vụ:
+    - Trang nêu ra tất cả dịch vụ của homestay
+    - Tiêu đề tên của dịch vụ
+    - Giới thiệu ngắn về dịch vụ
+    - Giá dịch vụ
+    - Chi tiết bài viết về dịch vụ đó
+Liên hệ:
+    - Chứa các thông tin liên hệ gồm: tên, số điện thoại, hotline, địa chỉ, email, link facebook, link zalo, link map iframe.

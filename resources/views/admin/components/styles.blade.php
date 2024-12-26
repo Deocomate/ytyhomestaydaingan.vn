@@ -17,5 +17,7 @@
 <link rel="stylesheet" href="/admin/plugins/bs-stepper/css/bs-stepper.min.css">
 <!-- dropzonejs -->
 <link rel="stylesheet" href="/admin/plugins/dropzone/min/dropzone.min.css">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">

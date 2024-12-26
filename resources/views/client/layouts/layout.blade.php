@@ -33,6 +33,7 @@
 
 @include("client.components.footer")
 @include("client.components.scripts")
+
 @stack("scripts")
 
 </body>
