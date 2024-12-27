@@ -21,7 +21,6 @@
                     <th>ID</th>
                     <th>Tiêu đề</th>
                     <th>Ảnh đại diện</th>
-                    <th>URL</th>
                     <th>Tác giả</th>
                     <th>Hành động</th>
                 </tr>
@@ -33,7 +32,6 @@
                         <td>{{$blog->title}}</td>
                         <td><img src="{{ $blog->thumbnail }}" alt="Thumbnail"
                                  style="max-width: 100px; max-height: 100px;object-fit: cover"></td>
-                        <td>{{$blog->url}}</td>
                         <td>{{$blog->author}}</td>
                         <td>
                             <a href="{{ route('admin.blogs.edit', $blog->id) }}" class="btn btn-primary btn-sm"><i

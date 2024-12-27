@@ -13,10 +13,6 @@
     <!-- for open graph social media -->
     <meta property="og:title" content="Hotel and Resort">
     <meta property="og:description" content="Moonlit - Hotel and Resort HTML Template">
-    <!-- for twitter sharing -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hotel and Resort">
-    <meta name="twitter:description" content="Moonlit - Hotel and Resort HTML Template">
     <!-- favicon -->
     <link rel="icon" href="/client/assets/images/favicon.ico" type="image/x-icon">
     <!-- title -->

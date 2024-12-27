@@ -31,7 +31,7 @@
                 <x-inputs.text-area label="Mô tả" name="description"
                                     :value="$service->description"></x-inputs.text-area>
 
-                <x-inputs.editor label="Chi tiết" name="detail" :value="$service->details"></x-inputs.editor>
+                <x-inputs.editor label="Chi tiết" name="details" :value="$service->details"></x-inputs.editor>
 
                 <button type="submit" class="btn btn-primary">Cập nhật</button>
             </form>

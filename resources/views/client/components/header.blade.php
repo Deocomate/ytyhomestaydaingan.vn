@@ -113,7 +113,8 @@
                         </div>
                         <div class="item">
                             <span class="h6">Địa chỉ</span>
-                            <a href="#"><i class="flaticon-marker"></i> {{$homestayInfo->address}}
+                            <a href="{{$homestayInfo->map_link}}"><i
+                                    class="flaticon-marker"></i> {{$homestayInfo->address}}
                                 <!--- Thay đổi địa chỉ --->
                             </a>
                         </div>
