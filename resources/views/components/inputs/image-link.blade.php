@@ -16,8 +16,9 @@
 
 @push("scripts")
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let button_popup_{{$name}} = document.getElementById("button-popup-{{$name}}")
+        document.addEventListener("DOMContentLoaded", function () {
+            let button_popup_{{$name}} = document.getElementById("button-popup-{{$name}}");
+
             button_popup_{{$name}}.onclick = async () => {
                 CKFinder.popup({
                     chooseFiles: true,
@@ -26,35 +27,32 @@
                     onInit: function (finder) {
                         finder.on('files:choose', function (evt) {
                             let file = evt.data.files.first();
-                            let fileUrl = file.getUrl();
-                            try {
-                                let url = new URL(fileUrl);
-                                let value = url.pathname;
-                            } catch (e) {
-                                // Nếu không thể phân tích URL, giả sử giá trị là đường dẫn tương đối
-                                let value = fileUrl;
-                            }
+                            let fullUrl = file.getUrl();
 
-                            // Nếu sử dụng biến trong khối try, khai báo bên ngoài
-                            let valueFinal;
+                            // Sử dụng URL để lấy phần pathname
+                            let path;
                             try {
-                                let url = new URL(fileUrl);
-                                valueFinal = url.pathname;
+                                // Tạo đối tượng URL để phân tích
+                                let urlObj = new URL(fullUrl);
+                                path = urlObj.pathname;
                             } catch (e) {
-                                valueFinal = fileUrl;
+                                // Nếu URL không hợp lệ hoặc là đường dẫn tương đối
+                                // Trực tiếp sử dụng fullUrl
+                                path = fullUrl;
                             }
 
                             let parentElement = button_popup_{{$name}}.closest(".input-group");
                             if (parentElement) {
                                 let input = parentElement.querySelector(".ckfinder-input");
                                 if (input) {
-                                    input.value = valueFinal;
+                                    input.value = path;
                                 }
                             }
                         });
 
+                        // Xử lý sự kiện khi người dùng hủy chọn file (optional)
                         finder.on('file:choose:resizedImage', function (evt) {
-                            // Nếu bạn cần xử lý hình ảnh được thay đổi kích thước
+                            // Tùy chọn: bạn có thể xử lý thêm nếu cần
                         });
                     }
                 });
