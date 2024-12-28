@@ -129,6 +129,24 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route("admin.locations.index")}}" class="nav-link">
+                        <i class="bi bi-map"></i>
+                        <p>Địa điểm tham quan<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route("admin.locations.index")}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Danh sách</p>
+                            </a>
+                            <a href="{{route("admin.locations.create")}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Thêm địa điểm mới</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>

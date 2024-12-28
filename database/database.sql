@@ -17,7 +17,6 @@ CREATE TABLE IF NOT EXISTS homestay_info
 );
 
 DROP TABLE IF EXISTS services;
--- Bảng services: dịch vụ của homestay
 CREATE TABLE IF NOT EXISTS services
 (
     id          INT AUTO_INCREMENT PRIMARY KEY,
@@ -75,6 +74,18 @@ CREATE TABLE IF NOT EXISTS blogs
     author      varchar(1000),
     created_at  timestamp
 );
+
+DROP TABLE IF EXISTS locations;
+CREATE TABLE IF NOT EXISTS locations
+(
+    id          INT AUTO_INCREMENT PRIMARY KEY,
+    title       varchar(1000),
+    description longtext,
+    thumbnail   varchar(1000),
+    price       int
+);
+
+-- Seeding Database
 
 INSERT INTO reviews (customer_thumbnail, customer_name, customer_review, customer_address, customer_rating)
 VALUES ('http://127.0.0.1:8000/userfiles/images/thumnail/thumb1.jpg', 'Nguyễn Văn A',
@@ -188,3 +199,26 @@ VALUES ('Y Tý mùa xuân: Sắc hoa rực rỡ', 'Bài viết về vẻ đẹp 
         'http://127.0.0.1:8000/userfiles/images/thumnail/thumb1.jpg', '/meo-tiet-kiem-y-ty', 'Nguyễn Văn P', NOW()),
        ('Những điểm check-in sống ảo ở Y Tý', 'Gợi ý các địa điểm đẹp để bạn có những bức ảnh sống ảo.',
         'http://127.0.0.1:8000/userfiles/images/thumnail/thumb2.jpg', '/check-in-y-ty', 'Trần Thị Q', NOW());
+
+INSERT INTO locations (title, description, thumbnail, price)
+VALUES ('Đồi chè Trái Tim', 'Đồi chè nổi tiếng với hình dáng trái tim, là điểm check-in không thể bỏ lỡ ở Mộc Châu.',
+        '/userfiles/images/thumbnail/thumb3.jpg', 20),
+       ('Thác Dải Yếm', 'Thác nước hùng vĩ được ví như "chiếc khăn" của nàng thiếu nữ trong truyền thuyết.',
+        '/userfiles/images/thumbnail/thumb5.jpg', 50),
+       ('Rừng thông Bản Áng', 'Khu rừng thông tuyệt đẹp nằm trên những ngọn đồi thoai thoải bên hồ nước trong xanh.',
+        '/userfiles/images/thumbnail/thumb7.jpg', 30),
+       ('Hang Dơi', 'Động tự nhiên với các thạch nhũ kỳ ảo, được mệnh danh là "Tây Thiên đệ nhất động".',
+        '/userfiles/images/thumbnail/thumb1.jpg', 40),
+       ('Thung lũng mận Nà Ka', 'Thung lũng rộng lớn với những cây mận nở trắng xóa vào mùa xuân.',
+        '/userfiles/images/thumbnail/thumb4.jpg', 10),
+       ('Cao nguyên Mộc Châu',
+        'Một trong những cao nguyên đẹp nhất Việt Nam với khí hậu mát mẻ và phong cảnh hữu tình.',
+        '/userfiles/images/thumbnail/thumb6.jpg', 60),
+       ('Đỉnh Pha Luông', 'Địa điểm dành cho những người yêu thích trekking với cảnh núi non hùng vĩ.',
+        '/userfiles/images/thumbnail/thumb2.jpg', 35),
+       ('Vườn hoa Happy Land', 'Khu du lịch với những cánh đồng hoa rực rỡ sắc màu và không gian vui chơi hấp dẫn.',
+        '/userfiles/images/thumbnail/thumb7.jpg', 25),
+       ('Bản Pa Phách', 'Bản làng của người H’Mông, nổi tiếng với những ngôi nhà đơn sơ giữa thiên nhiên.',
+        '/userfiles/images/thumbnail/thumb3.jpg', 55),
+       ('Ngũ động Bản Ôn', 'Quần thể hang động độc đáo nằm giữa núi rừng hoang sơ.',
+        '/userfiles/images/thumbnail/thumb5.jpg', 45);

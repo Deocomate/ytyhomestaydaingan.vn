@@ -18,7 +18,7 @@
             <div class="row">
                 @foreach($services as $service)
                     <div
-                            class="single__service__item {{ $loop->index % 2 == 0 ? 'if__is__default' : 'if__is__reverse' }}">
+                        class="single__service__item {{ $loop->index % 2 == 0 ? 'if__is__default' : 'if__is__reverse' }}">
                         <div class="service__thumb jarallax">
                             <img class="jarallax-img" src="{{ $service->thumbnail }}" width="605"
                                  height="535"
@@ -30,7 +30,6 @@
                                 <h2 class="content__title h3 lh-1">{{ $service->title }}</h2>
                             </div>
                             <p class="font-sm mt-30 wow fadeInUp">{{ $service->description }}</p>
-                            <p class="font-sm mt-10 wow fadeInUp">{{ $service->details }}</p>
                             <p class="font-sm mt-10 wow fadeInUp">
                                 <strong>Giá:</strong> {{ number_format($service->price, 0, ',', '.') }} VND</p>
                             <a href="{{ route('client.dich_vu_chi_tiet',$service->id) }}"

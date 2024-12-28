@@ -16,7 +16,8 @@ use App\Http\Controllers\Admin\{
     RoomController,
     ReviewController,
     PostController,
-    BlogController
+    BlogController,
+    LocationController
 };
 
 // Client routes
@@ -54,6 +55,7 @@ Route::prefix('admin')->name("admin.")->middleware('auth')->group(function () {
     Route::resource('reviews', ReviewController::class);
     Route::resource('posts', PostController::class);
     Route::resource('blogs', BlogController::class);
+    Route::resource('locations', LocationController::class);
 
     // CK Finder setup (nếu cần bảo vệ)
     Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')

@@ -5,15 +5,15 @@
     <div class="rts__section py-3">
         <div class="container">
             <div class="row g-30 sticky-wrap">
-                <div class="col-lg-7 col-xl-8">
+                <div class="col-lg-7">
                     <div class="blog__list__item ">
                         <!-- Vòng lặp để hiển thị từng blog -->
                         @foreach($blogs as $blog)
-                            <div class="single__blog">
+                            <div class="single__blog p-3 p-md-4">
                                 <div class="single__blog__thumb">
                                     <a href="{{ route('client.bai_viet_chi_tiet', ['id' => $blog->id]) }}">
                                         <img src="{{ $blog->thumbnail }}"
-                                             style="width: 100%;height: 400px;object-fit: cover"
+                                             style="width: 100%;height: 300px;object-fit: cover"
                                              alt="{{ $blog->title }}">
                                     </a>
                                 </div>
@@ -38,7 +38,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-5 sticky-item">
+                <div class="col-lg-5 sticky-item">
                     <div class="blog__sidebar__section">
                         <h6 class="mb-4">Bài viết mới</h6>
                         <div class="latest__post mb-30">
@@ -58,17 +58,6 @@
                                     </div>
                                 </div>
                             @endforeach
-                        </div>
-                        <h6 class="mb-4">Tags</h6>
-                        <div class="tag__list">
-                            <div class="tags__list">
-                                <!-- Nếu bạn có dữ liệu tags, hãy lặp qua chúng thay vì sử dụng danh sách tĩnh -->
-                                <a href="#">Hotel Stay</a>
-                                <a href="#">Travel Blog</a>
-                                <a href="#">Guest Experience</a>
-                                <a href="#">Hotel Guide</a>
-                                <a href="#">Hotel Review</a>
-                            </div>
                         </div>
                     </div>
                 </div>

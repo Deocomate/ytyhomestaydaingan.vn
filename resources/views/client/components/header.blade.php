@@ -22,7 +22,7 @@
         </div>
     </div>
 </div>
-<header class="main__header header__function">
+<header class="main__header header__function shadow">
     <div class="container">
         <div class="row">
             <div class="d-flex align-items-center justify-content-between">
@@ -32,12 +32,12 @@
                     </div>
                 </div>
                 <div class="main__right">
-                    <button data-bs-toggle="modal" data-bs-target="#bookRoomModal"
-                            class="theme-btn btn-style sm-btn fill"><span>Đặt phòng</span></button>
                     <button class="theme-btn btn-style sm-btn fill menu__btn d-lg-none" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <span><img src="/client/assets/images/icon/menu-icon.svg" alt=""></span>
                     </button>
+                    <button data-bs-toggle="modal" data-bs-target="#bookRoomModal"
+                            class="theme-btn btn-style sm-btn fill"><span>Đặt phòng</span></button>
                 </div>
             </div>
         </div>

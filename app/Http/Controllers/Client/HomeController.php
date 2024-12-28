@@ -13,7 +13,8 @@ class HomeController extends Controller
         $services = \DB::table("services")->limit(8)->get();
         $rooms = \DB::table("rooms")->get();
         $reviews = \DB::table("reviews")->get();
-        return view("client.modules.trang_chu.index", compact(["services", "rooms", "reviews"]));
+        $locations = \DB::table("locations")->get();
+        return view("client.modules.trang_chu.index", compact(["services", "rooms", "reviews", "locations"]));
     }
 
     public function bai_viet()
