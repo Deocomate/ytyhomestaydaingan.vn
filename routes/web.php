@@ -11,6 +11,7 @@ use App\Http\Controllers\Seeder\SeederController;
 use App\Http\Controllers\Database\DatabaseController;
 
 use App\Http\Controllers\Admin\{
+    AdminController,
     HomestayInfoController,
     ServiceController,
     RoomController,
@@ -42,13 +43,16 @@ Route::post("/authenticate", [LoginController::class, "authenticate"])->name("ad
 
 
 // Admin routes protected by 'auth' middleware
-Route::get("/seeder", [SeederController::class, "index"])->name("seeder");
-
-Route::get("/database", [DatabaseController::class, "editor"])->name("database.editor");
-Route::post("/executeSQL", [DatabaseController::class, "executeSQL"])->name("database.executeSQL");
+//Route::get("/seeder", [SeederController::class, "index"])->name("seeder");
+//Route::get("/database", [DatabaseController::class, "editor"])->name("database.editor");
+//Route::post("/executeSQL", [DatabaseController::class, "executeSQL"])->name("database.executeSQL");
 
 Route::prefix('admin')->name("admin.")->middleware('auth')->group(function () {
     Route::get("/index", [HomestayInfoController::class, "index"])->name("index");
+
+    Route::get("/passwordReset", [AdminController::class, "index"])->name("passwordReset");
+    Route::post("/updatePassword", [AdminController::class, "updatePassword"])->name("updatePassword");
+
     Route::resource('homestay-info', HomestayInfoController::class);
     Route::resource('services', ServiceController::class);
     Route::resource('rooms', RoomController::class);

@@ -147,6 +147,20 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route("admin.passwordReset")}}" class="nav-link">
+                        <i class="bi bi-key"></i>
+                        <p>Quản lý tài khoản<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route("admin.passwordReset")}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Đổi mật khẩu</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
