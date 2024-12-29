@@ -135,7 +135,7 @@
                     loop: true,
                     speed: 500,
                     centeredSlides: true,
-                    autoplay: true,
+                    autoplay: false,
                     pagination: {
                         el: ".rts-pagination",
                         clickable: true

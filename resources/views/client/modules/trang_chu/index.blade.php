@@ -102,7 +102,8 @@
                                 <a href="{{ route('client.dich_vu_chi_tiet',$service->id) }}">
                                     <h6 class="card-title h6 mb-3">{{$service->title}}</h6>
                                 </a>
-                                <p class="card-text">{{$service->description}}</p>
+                                <p class="card-text">{{str($service->description)->limit()}} <br> <a
+                                            href="{{ route('client.dich_vu_chi_tiet',$service->id) }}">Xem thêm</a></p>
                             </div>
                         </div>
                     </div>
@@ -234,7 +235,8 @@
                 <div class="col-12">
                     <div class="video__area position-relative wow fadeInUp">
                         <div class="video__area__image jara-mask-2 jarallax rounded-0">
-                            <img class="radius-none jarallax-img" src="/client/assets/imgs/homestay-19.jpg"
+                            <img class="radius-none jarallax-img"
+                                 src="{{asset("client/assets/fixed-images/head-2.jpg")}}"
                                  alt="Video Y Tý">
                         </div>
                         <div class="video--spinner__wrapper ">
@@ -277,8 +279,7 @@
             <div class="row">
                 <div class="insta__gallery__slider overflow-hidden">
                     <div class="swiper-wrapper gallery">
-
-                        @for($i=0;$i<100;$i++)
+                        @for($i=0;$i<199;$i++)
                             <!-- single gallery image -->
                             <div class="swiper-slide">
                                 <div class="gallery__item">
@@ -349,10 +350,10 @@
             <!-- row end -->
             <div class="row">
                 <div class="room__slider is__home__four">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" style="align-items: stretch">
                         @foreach($locations as $location)
-                            <div class="swiper-slide">
-                                <div class="room__slider__box p-3 p-md-4">
+                            <div class="swiper-slide" style="height: auto">
+                                <div class="room__slider__box p-3 p-md-4" style="height: 100%">
                                     <div class="room__slider__thumb">
                                         <div class="link__item">
                                             <figure class="w-100">
