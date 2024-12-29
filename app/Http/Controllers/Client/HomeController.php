@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function trang_chu()
     {
-        $services = \DB::table("services")->limit(8)->get();
+        $services = \DB::table("services")->limit(12)->get();
         $rooms = \DB::table("rooms")->get();
         $reviews = \DB::table("reviews")->get();
         $locations = \DB::table("locations")->get();
