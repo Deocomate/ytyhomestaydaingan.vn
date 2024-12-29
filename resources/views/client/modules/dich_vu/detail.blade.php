@@ -13,9 +13,9 @@
                                  src="{{ $service->thumbnail }}" alt="{{ $service->title }}">
                             <h6 class="mb-4">Loại dịch vụ: {{ $service->type }}</h6>
                             <p class="description">{{ $service->description }}</p>
+                            <h6 class="mb-4">Giá: {{ number_format($service->price, 0, ',', '.') }} VND</h6>
                             <h6 class="mb-4">Chi tiết:</h6>
                             <p class="description">{!! $service->details !!}</p>
-                            <h6 class="mb-4">Giá: {{ number_format($service->price, 0, ',', '.') }} VND</h6>
                         </div>
                     </div>
                 </div>

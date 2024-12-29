@@ -70,7 +70,7 @@
                     speed: 1000,
                     effect: "slide",
                     autoplay: {
-                        delay: 5000,
+                        delay: 3000,
                         disableOnInteraction: false,
                     }
                 });
@@ -133,9 +133,9 @@
                     slidesPerView: 3,
                     spaceBetween: 30,
                     loop: true,
-                    speed: 1000,
+                    speed: 500,
                     centeredSlides: true,
-                    autoplay: false,
+                    autoplay: true,
                     pagination: {
                         el: ".rts-pagination",
                         clickable: true
@@ -366,7 +366,7 @@
                 spaceBetween: 15,
                 grabCursor: true,
                 autoplay: {
-                    delay: 3000,
+                    delay: 300,
                 },
                 breakpoints: {
                     0: {

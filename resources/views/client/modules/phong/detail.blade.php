@@ -13,9 +13,9 @@
                                  src="{{ $room->thumbnail }}" alt="{{ $room->title }}">
                             <h6 class="mb-4">Loại dịch vụ: {{ $room->type }}</h6>
                             <p class="description">{{ $room->description }}</p>
+                            <h6 class="mb-4">Giá: {{ number_format($room->price, 0, ',', '.') }} VND</h6>
                             <h6 class="mb-4">Chi tiết:</h6>
                             <p class="description">{!! $room->details !!}</p>
-                            <h6 class="mb-4">Giá: {{ number_format($room->price, 0, ',', '.') }} VND</h6>
                         </div>
                     </div>
                 </div>

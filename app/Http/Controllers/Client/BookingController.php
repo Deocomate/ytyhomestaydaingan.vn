@@ -20,7 +20,7 @@ class BookingController extends Controller
             "children" => "required"
         ]);
 
-        \Mail::to(config() . env("MAIL_USERNAME"))->send(new BookingMail($validated));
+        \Mail::to(env("MAIL_USERNAME"))->send(new BookingMail($validated));
         \Mail::to($validated["email"])->send(new BookingMail($validated));
 
         session()->flash("success", "Gửi thông tin thành công! Vui lòng kiểm tra email của bạn!");
