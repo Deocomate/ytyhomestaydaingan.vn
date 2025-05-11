@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $homestayInfo = \DB::table("homestay_info")->get()->first();
-        \View::share("homestayInfo", $homestayInfo);
+        if (Schema::hasTable("homestay_info")) {
+            $homestayInfo = \DB::table("homestay_info")->get()->first();
+            \View::share("homestayInfo", $homestayInfo);
+        }
+
     }
 }
