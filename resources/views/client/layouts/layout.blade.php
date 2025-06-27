@@ -15,7 +15,7 @@
     <meta property="og:title" content="{{ $homestayInfo->title }}">
     <meta property="og:description" content="{{ $homestayInfo->description }}">
     <!-- favicon -->
-    <link rel="icon" href="{{ assets('/client/assets/icons/ytyhomestay-icon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('/client/assets/icons/ytyhomestay-icon.ico') }}" type="image/x-icon">
     <!-- title -->
     <title>@yield('title')</title>
 
